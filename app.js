@@ -17,13 +17,14 @@ function startTimer() {
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
         clearInterval(downloadTimer);
+		var curr_score = document.getElementById("total-score").innerHTML;
+		$("#scoreModal").text("Score: " + curr_score);
         $('#endModal').modal('show');
       }
       document.getElementById("timer").value = 120 - timeleft;
       document.getElementById("timer").innerHTML = timeleft + "s remaining";
       timeleft -= 1;
     }, 1000);
-
 }
 
 

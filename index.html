@@ -9,24 +9,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 <title>Boggle</title>
 <body>
-
-
-	<script>
-		var openFile = function(event) {
-			var input = event.target;
-			var reader = new FileReader();
-			reader.onload = function(){
-				var text = reader.result;
-				// var node = document.getElementById('output');
-				node.innerText = text;
-				console.log(reader.result.substring(0, 200));
-			};
-			reader.readAsText(input.files[0]);
-		};
-	</script>
 	<script type="text/javascript">
 		$(window).on('load',function(){
 			$('#myModal').modal('show');
+			board_generate();
+			board();
+			button_event();	
 		});
 	</script>
 	<div class="modal hide fade" id="myModal">
@@ -49,7 +37,7 @@
 		<p id="scoreModal">Score:</p>
 		</div>
 		<div class="modal-footer">
-		<a href="#" id="startbutton" rel="modal:close" class="btn btn-primary">Play again!</a>
+		<a href="#" id="startbutton" rel="modal:close" class="btn btn-primary" onclick="startTimer()">Play again!</a>
 		</div>
 	</div>
 	
@@ -84,12 +72,5 @@
 	</div>
 
 </body>
-
-
-<script type="text/javascript">
-	board_generate();
-	board();
-	button_event();	
-</script>
 
 </html>
