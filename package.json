@@ -1,0 +1,23 @@
+{
+  "name": "boggle",
+  "version": "1.0.0",
+  "description": "``` Open index.html in your browser and play. ```",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevans09/boggle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sevans09/boggle/issues"
+  },
+  "homepage": "https://github.com/sevans09/boggle#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
