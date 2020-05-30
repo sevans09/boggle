@@ -13,6 +13,8 @@ var submitted_words = new Set();
 
 function startTimer() {
     // 1 less than actual time
+	document.getElementById("timer").value = 120;
+    document.getElementById("timer").innerHTML = "120s remaining";
     var timeleft = 119;
     var downloadTimer = setInterval(function(){
       if(timeleft <= 0){
@@ -173,21 +175,15 @@ function submit_word(){
 		$("#error").css("color", "#424242");
 		$("#error").text("Please select a word before submitting.");
 	}else{
-
 		curr_word = [];
-		console.log("word is", current_word)
-		
-
 		var result = words[current_word];
 		if (result === undefined) {
 			$("#error").css("color", "#424242");
 			$("#error").text("Word does not exist.");
-			console.log("undefined")
 			current_word = "";
 			$('#current_word').html(current_word);
 		}
 		else {
-			console.log("word exissts")
 			submitted_words.add(current_word);
 			current_word = "";
 			$('#current_word').html(current_word);
